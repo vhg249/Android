@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:padding="5dp"
+        android:text="Quản lý"
+        android:gravity="center"
+        android:background="#d50000"
+        android:textColor="@color/white"
+        />
+
+<!--    item form start-->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1"
+        android:padding="10dp"
+        >
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phương tiện" />
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+
+        <TableRow android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lịch trình" />
+
+            <EditText
+                android:id="@+id/edLichTrinh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+        <TableRow android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thời gian" />
+
+            <EditText
+                android:id="@+id/edTgian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 />
+        </TableRow>
+
+
+    </TableLayout>
+
+<!--    item form end-->
+
+<!--    button action-->
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        >
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Nhập"
+            android:background="#d50000"
+            android:textColor="@color/white"
+            android:layout_marginRight="10dp"
+            />
+
+        <Button
+            android:id="@+id/btnEdit"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Sửa"
+            android:textColor="@color/white"
+            android:background="#d50000"
+            android:layout_marginRight="10dp"
+            />
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Xóa"
+            android:textColor="@color/white"
+            android:background="#d50000"
+            />
+    </LinearLayout>
+<!--    button action end-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:padding="5dp"
+        android:text="Danh sách quản lý"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:background="#d50000"
+        android:textColor="@color/white"
+        />
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:queryHint="Nhập tên lịch trình để tìm kiếm"
+        android:iconifiedByDefault="false"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        />
+
+</LinearLayout>

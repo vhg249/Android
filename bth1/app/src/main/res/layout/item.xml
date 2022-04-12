@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:outlineSpotShadowColor="#eee"
+    android:paddingHorizontal="10dp"
+    android:paddingVertical="15dp"
+    >
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:weightSum="10"
+    >
+
+    <ImageView
+        android:id="@+id/itemImg"
+        android:src="@drawable/ic_launcher_background"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+
+    <TextView
+        android:id="@+id/itemLichTrinh"
+        android:text="Lich Trinh"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        />
+
+    <TextView
+        android:id="@+id/itemTgian"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:text="Thoi gian"
+        />
+
+
+</LinearLayout>
+</androidx.cardview.widget.CardView>

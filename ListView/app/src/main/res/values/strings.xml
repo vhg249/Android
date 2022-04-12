@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">test</string>
+    <string-array name="tech">
+        <item>Android</item>
+        <item>Java</item>
+        <item>Python</item>
+        <item>C++</item>
+        <item>Ajax</item>
+        <item>Nodejs</item>
+    </string-array>
+</resources>

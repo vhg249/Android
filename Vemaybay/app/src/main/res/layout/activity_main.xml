@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="VE MAY BAY"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:background="@color/teal_200"/>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+        <TableRow>
+            <TextView
+                android:text="Ma ve:"
+                android:textSize="16dp"/>
+            <EditText
+                android:textSize="16dp"
+                android:hint="Nhap ma ve"
+                android:id="@+id/maVe"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Loai ve:"
+                android:textSize="16dp"
+                />
+            <RadioGroup
+                android:id="@+id/radioGroup">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="VIP"
+                    android:textSize="16dp"
+                    android:checked="true"
+                    android:id="@+id/rbVip"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pho thong"
+                    android:textSize="16dp"
+                    android:id="@+id/rbPt"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gia re"
+                    android:textSize="16dp"
+                    android:id="@+id/rbGr"/>
+
+            </RadioGroup>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Ngay bay:"
+                android:textSize="16dp"/>
+            <EditText
+                android:hint="Chon ngay bay"
+                android:textSize="16dp"
+                android:id="@+id/ngay"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Thanh toan:"
+                android:textSize="16dp"
+                />
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Da thanh toan"
+                    android:textSize="16dp"
+                    android:checked="true"
+                    android:id="@+id/rbDaTT"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chua thanh toan"
+                    android:textSize="16dp"
+                    android:id="@+id/rbChuaTT"
+                    android:layout_marginLeft="20dp"/>
+
+            </RadioGroup>
+        </TableRow>
+    </TableLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_bt"
+            android:text="Them"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:id="@+id/btThem"
+            android:layout_marginLeft="60dp"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_bt"
+            android:text="Sua"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:id="@+id/btSua"
+            android:layout_marginLeft="100dp"/>
+    </LinearLayout>
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/search"
+        android:queryHint="Search"
+        android:iconifiedByDefault="false"
+        android:layout_marginTop="5dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Danh sach ve da dat"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:background="@color/teal_200"
+        android:layout_marginBottom="10dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/rv"/>
+
+</LinearLayout>
