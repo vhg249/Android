@@ -19,7 +19,7 @@ public class SpinnerAdapter extends BaseAdapter {
     }
 
     @Override
-    public int getCount()i {
+    public int getCount(){
         return imgs.length;
     }
 
